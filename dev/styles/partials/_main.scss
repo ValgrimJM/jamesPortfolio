@@ -1,0 +1,17 @@
+body{
+    background-color: $bgBlue;
+}
+
+.mySkills{
+    background-color: $bgBlock;
+
+}
+.skillList{
+    display: flex;
+    flex-wrap: wrap;
+    .skillBlock{
+        flex: 1 0 25%;
+        height: 60px;
+        background-color: $skillBlockBG;
+    }
+}
