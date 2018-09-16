@@ -1,17 +1,185 @@
 body{
     background-color: $bgBlue;
 }
-
-.mySkills{
+.wrapper{
+    width: 90%;
+    margin: 0 auto;
+}
+ul{
+    list-style-type: none;
+    padding: 0;
+}
+.about, .myWorks{
     background-color: $bgBlock;
-
+    display: flex;
+}
+.segment{
+    margin-top: 10rem;
+}
+.gradientTitle{
+    @include animatedGradientBody(150px);
+    margin: 0 auto 30px;
+    &:after{
+        @include animatedGradientAfter;
+    }
+}
+//************ About section css ************
+.aboutContainer{
+    display: flex;
+    flex-wrap: wrap;
+    .sectionTitle{
+        flex: 1 0 100%;
+    }
+    .aboutImg{
+        flex: 1 0 35%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .portfolioImg{
+            border-radius: 10px;
+            width: 60%;
+        }
+    }
+    .aboutText{
+        flex: 1 0 65%;
+    }
+}
+//************ Skill list css ************
+.mySkills{
+    height: 100vh;
 }
 .skillList{
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
     .skillBlock{
-        flex: 1 0 25%;
-        height: 60px;
+        flex: 1 0 calc(25% - 20px);
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        height: 180px;
+        margin: 10px 10px;
         background-color: $skillBlockBG;
+        .skillIcon{
+            height: 100px;
+            width: 100px;
+            margin: 20px auto;
+            background-color: $bgSkillSphere;
+            border-radius: 50%;
+            position: relative;
+            transition: 0.3s;
+            &:hover{
+                color: black;
+                background-color: $white;
+                transition: 0.3s;
+            }
+        }
+    }
+    i{
+        font-size: 7rem;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
     }
 }
+//************ My Works css ************
+.myWorks{
+    .galleryContainer{
+        min-height: 65vh;
+        width: 100%;
+        .project{
+            display: flex;
+        }
+    }
+}
+
+.projectBlock{
+        display: flex;
+        width: 45%;
+        margin-left: 5%;
+        &.right{
+            min-width: 25rem;
+            img{
+                width: 100%;
+            }
+        }
+        &.left{
+            text-align: right;
+            flex-direction: column;
+            justify-content: space-evenly;
+            .projectTitle{
+                text-transform: uppercase;
+
+            }
+        }
+}
+//Contact and Social Media Styles
+.contact{
+    height: 65vh;
+}
+
+.contactContainer{
+    display: flex;
+    .contactForm, .socialLinks{
+        display: flex;
+        flex-direction: column;
+        width: 45%;
+    }
+    .contactForm{
+        margin-right: 5%;
+    }
+    .socialLinks{
+        margin-left: 5%;
+    }
+}
+
+.contactField{
+    position: relative;
+}
+input{
+    height: 40px;
+}
+textarea{
+    resize: none;
+}
+
+input, textarea{
+    width: 100%;
+    text-indent: 5px;
+    box-shadow: none;
+    border: none;
+    outline: none;
+    background-color: $bgBlock;
+    border-image-slice: 1;
+    color: $white;
+}
+label{
+    position: absolute;
+    top: 10px;
+    left: 5px;
+    pointer-events: none;
+    transition: 0.5s;
+}
+// input:focus ~ label, textarea:focus ~ label,input:valid ~ label, textarea:valid ~ label
+// input:invalid ~ label, textarea:invalid ~ label{
+//     top: -12px;
+//     color: #00b0ff;
+// }
+input:not(:placeholder-shown) ~ label, input:focus ~ label, textarea:focus ~ label, textarea:not(:placeholder-shown) ~ label{
+    top: -20px;
+    color: #00b0ff;
+    
+}
+
+.gradientInput{
+    @include animatedGradientBody(100%);
+    &:after{
+        @include animatedGradientAfter;
+    }
+}
+
+
+

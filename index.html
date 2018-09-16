@@ -4,12 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:400,600,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+        crossorigin="anonymous">
     <link rel="stylesheet" href="public/styles/style.css">
     <title>James MacDonald | Front-End Web Developer</title>
 </head>
 <body>
-    <div class="wrapper">
+    <div class="bodyWrapper">
         <header class="headerBar">
             <ul class="headerLinks">
                 <!-- <li class="link"></li>
@@ -19,41 +22,175 @@
         </header>
         <main>
             <section class="hero">
-                <h1 class="heroName">James MacDonald</h1>
-                <h2 class="heroJob">Front-End Developer</h2>
+                <div class="heroTextContainer">
+                    <h1 class="heroName">James MacDonald</h1>
+                    <h2 class="heroJob">Front-End Developer</h2>
+                </div>
             </section>
-            <section class="about">
-                <p>Hi, I'm James MacDonald, a Mississauga based front-end web developer.  Seeking new experiences and opportunities has been the driving force behind much of my life, taking me across the globe and meeting people of all walks of life.  My problem-solving nature and natural curiosity stays with me whether im coding at the desk, or cooking in the kitchen.  From history to HTML, Firebase to fossils, my passion drives me to learn as much as I can.</p>
-                <p>The feeling of satisfation when all of the various pieces of code come together is the sugar in my coffee.  I look forward to working with a team that strives for greatness and </p>
+            <section class="about segment">
+                <div class="wrapper">
+                    <h3 class="sectionTitle">About Me</h3>
+                    <div class="gradientTitle"></div>
+                    <div class="aboutContainer">
+                        <figure class="aboutImg">
+                            <img class="portfolioImg" src="./assets/white.svg" alt="placeholder">
+                        </figure>
+                        <div class="aboutText">
+                            <p>Hi, I'm James MacDonald, a Mississauga based front-end web developer.  Seeking new experiences and opportunities has been the driving force behind much of my life, taking me across the globe and meeting people of all walks of life.  My problem-solving nature and natural curiosity stays with me whether im coding at the desk, or cooking in the kitchen.  From history to HTML, Firebase to fossils, my passion drives me to learn as much as I can.</p>
+                            <p>The feeling of satisfation when all of the various pieces of code come together is the sugar in my coffee.  I look forward to working with a team that strives for greatness and </p>
+                        </div>
+                    </div>
+                </div>
             </section>
-            <section class="mySkills">
-                <ul class="skillList">
-                    <li class="skillBlock"></li>
-                    <li class="skillBlock"></li>
-                    <li class="skillBlock"></li>
-                    <li class="skillBlock"></li>
-                    <li class="skillBlock"></li>
-                </ul>
+            <section class="mySkills segment">
+                <div class="wrapper">
+                    <h3 class="sectionTitle">My Skills</h3>
+                    <div class="gradientTitle"></div>
+                    <div class="mySkillsContainer">
+                        <ul class="skillList">
+                            <li class="skillBlock">
+                                <div class="skillIcon">
+                                    <i class="devicon-html5-plain-wordmark"></i>
+                                </div>
+                                <h6 class="skillTitle">HTML 5</h6>
+                            </li>
+                            <li class="skillBlock">
+                                <div class="skillIcon">
+                                    <i class="devicon-css3-plain-wordmark"></i>
+                                </div>
+                                <h6 class="skillTitle">CSS3</h6>
+                            </li>
+                            <li class="skillBlock">
+                                <div class="skillIcon">
+                                    <i class="devicon-git-plain"></i>
+                                </div>
+                                <h6 class="skillTitle">Git</h6>
+                            </li>
+                            <li class="skillBlock">
+                                <div class="skillIcon">
+                                    <i class="devicon-react-original"></i>
+                                </div>
+                                <h6 class="skillTitle">React</h6>
+                            </li>
+                            <li class="skillBlock">
+                                <div class="skillIcon">
+                                    <i class="devicon-javascript-plain"></i>
+                                </div>
+                                <h6 class="skillTitle">JavaScript</h6>
+                            </li>
+                            <li class="skillBlock">
+                                <div class="skillIcon">
+                                    <i class="devicon-mysql-plain"></i>
+                                </div>
+                                <h6 class="skillTitle">MySQL</h6>
+                            </li>
+                            <li class="skillBlock">
+                                <div class="skillIcon">
+                                    <i class="devicon-gulp-plain"></i>
+                                </div>
+                                <h6 class="skillTitle">Gulp</h6>
+                            </li>
+                            <li class="skillBlock">
+                                <div class="skillIcon">
+                                    <i class="devicon-jquery-plain"></i>
+                                </div>
+                                <h6 class="skillTitle">jQuery</h6>
+                            </li>
+                            <li class="skillBlock">
+                                <div class="skillIcon">
+                                    <i class="devicon-sass-original"></i>
+                                </div>
+                                <h6 class="skillTitle">SASS</h6>
+                            </li>
+                            <li class="skillBlock">
+                                <div class="skillIcon">
+                                    <i class="devicon-github-plain"></i>
+                                </div>
+                                <h6 class="skillTitle">GitHub</h6>
+                            </li>
+                            <li class="skillBlock">
+                                <div class="skillIcon">
+                                    <i class="devicon-csharp-plain"></i>
+                                </div>
+                                <h6 class="skillTitle">C#</h6>
+                            </li>
+                            <li class="skillBlock">
+                                <div class="skillIcon">
+                                    <i class="devicon-photoshop-plain"></i>
+                                </div>
+                                <h6 class="skillTitle">Photoshop</h6>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </section>
-            <section class="myWorks">
-                <img src="./assets/Layer 0.svg" alt="">
-                <img src="./assets/Layer 0.svg" alt="">
-                <img src="./assets/Layer 0.svg" alt="">
+            <section class="myWorks segment">
+                <div class="wrapper">
+                    <h3 class="sectionTitle">My Works</h3>
+                    <div class="gradientTitle"></div>
+                    <div class="myWorksContainer">
+                        <div class="galleryContainer">
+                            <div class="project">
+                                <div class="projectBlock left">
+                                    <h4 class="subSectionTitle">Sample Project 1</h4>
+                                    <p class="projectDesc">One sentence description of the project</p>
+                                    <p class="projectTools">HTML, SCSS, JavaScript, jQuery</p>
+                                    
+                                    <!-- <a href="" class="loadProject">Live</a>
+                                        <a href="" class="loadProject">GitHub</a> -->
+                                        <div class="linkButtons">
+                                            <button class="loadProject">Live</button>
+                                            <button class="loadProject">GitHub</button>
+                                        </div>
+                                    </div>
+                                    
+                                    <figure class="projectBlock right">
+                                        <img src="./assets/Layer 0.svg" alt="">
+                                    </figure>
+                                </div>
+                            </div>
+                            <div class="galleryControls">
+                                
+                            </div>
+                        </div>
+                </div>
             </section>
-            <section class="contact">
-                <form class="contactForm" action="">
-                    <input type="text" class="name">
-                    <input type="text" class="email">
-                    <input type="text" class="message">
-                </form>
+            <section class="contact segment">
+                <div class="wrapper">
+                    <h3 class="sectionTitle">Contact</h3>
+                    <div class="gradientTitle"></div>
+                    <div class="contactContainer">
+                        <form class="contactForm" action="">
+                            <h4 class="subSectionTitle">Let's Work Together</h4>
+                            <div class="contactField">
+                                <input type="text" class="name" name="name" placeholder=" ">
+                                <label for="name">Name</label>
+                                <div class="gradientInput"></div>
+                            </div>
+                            <div class="contactField">
+                                <input type="email" class="email" name="email" placeholder=" ">
+                                <label for="email">Email Address</label>
+                                <div class="gradientInput"></div>
+                            </div>
+                            <div class="contactField">
+                                <textarea class="message" name="message" placeholder=" " rows="12"></textarea>
+                                <label for="message">Your Message</label>
+                                <div class="gradientInput"></div>
+                            </div>
+                            </form>
+                        <ul class="socialLinks">
+                            <h4 class="subSectionTitle">Connect With Me At: </h4>
+                            <li class="social"><i class="fab fa-twitter"></i>Twitter</li>
+                            <li class="social"><i class="devicon-github-plain"></i>GitHub</li>
+                            <li class="social"><i class="fab fa-medium"></i>Medium</li>
+                            <li class="social"><i class="fab fa-linkedin"></i>LinkedIn</li>
+                        </ul>
+                    </div>
+                </div>
             </section>
         </main>
         <footer class="footerBar">
-            <ul class="socialLinks">
-                <li class="social"></li>
-                <li class="social"></li>
-                <li class="social"></li>
-            </ul>
+            
         </footer>
         <a href="https://www.freepik.com/free-photos-vectors/background">Background vector created by Freepik</a>
         <a href='https://www.freepik.com/free-vector/abstract-molecules-background_1170854.htm'>Designed by Harryarts</a>

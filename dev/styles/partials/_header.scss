@@ -1,7 +1,11 @@
 .headerBar{
+    display: none;
     height: 60px;
 }
 .hero{
+    .heroTextContainer{
+        margin-top: 12rem;
+    }
     height: 100vh;
     text-align: center;
 }
