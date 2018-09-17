@@ -51,7 +51,7 @@ ul{
     height: 100vh;
     background: 
     linear-gradient(
-        rgba(5, 7, 28, 0.85), 
+        rgba(5, 7, 28, 0.90), 
         rgba(5, 7, 28, 1)), 
         url(../../../assets/615.png);
     padding-top: 40px;
@@ -96,10 +96,15 @@ ul{
 //************ My Works css ************
 .myWorks{
     .galleryContainer{
-        min-height: 60vh;
+        min-height: 50vh;
         width: 100%;
+        position: relative;
         .project{
-            display: flex;
+            position: absolute;
+            display: none;
+            &.active{
+                display: flex
+            }
         }
     }
 }
@@ -112,6 +117,7 @@ ul{
             min-width: 25rem;
             img{
                 width: 100%;
+                height: 100%;
             }
         }
         &.left{
@@ -127,11 +133,13 @@ ul{
 .linkButtons{
     a{
         text-decoration: none;
-        padding: 20px;
-        background: white;
+        padding: 20px 35px;
+        background: $bgBlock;
+        color: $white;
         transition: 0.3s;
+        margin: 0 15px;
         &:hover{
-            background: red;
+            background: $bgSkillSphere;
         }
     }
 }
@@ -249,12 +257,26 @@ input:not(:placeholder-shown) ~ label, input:focus ~ label, textarea:focus ~ lab
     color: $highlightLinks;
     
 }
+.gradientButton{
+    position: relative;
+    z-index: 3;
+    &:after{
+        @include animatedButtonGradientAfter;
+    }
+    input{
+        &:hover{
+            background: $bgSkillSphere;
+            transition: 0.3s;
+        }
+    }
+    
+}
 
 .gradientInput{
     @include animatedGradientBody(100%);
+    
     &:after{
         @include animatedGradientAfter;
-        width: 100%;
         left: 0;
     }
 }
@@ -264,6 +286,7 @@ input:not(:placeholder-shown) ~ label, input:focus ~ label, textarea:focus ~ lab
     color: $white;
     &:hover{
         color: $highlightLinks;
+        transition: 0.3s;
     }
 }
 .socialLinks a{

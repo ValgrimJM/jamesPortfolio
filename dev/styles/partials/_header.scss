@@ -8,9 +8,11 @@
     
     position: absolute;
     &:after{
-        @include animatedGradientAfter;
-        height: 30vh;
-        mask-image: url(https://mdn.mozillademos.org/files/12676/star.svg);
+        @include animatedHeroGradientAfter;
+        height: 100vh;
+        z-index: -1;
+        mask-image: url($heroSVG);
+        -webkit-mask-image: url($heroSVG);
         // clip-path: url(../../../assets/Layer\ 0.svg);
     }
 }
@@ -26,8 +28,12 @@
     width: 100%;
 }
 .hero{
+    position: relative;
     .heroTextContainer{
-        margin-top: 12rem;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
     }
     height: 100vh;
     text-align: center;

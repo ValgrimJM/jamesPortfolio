@@ -24,7 +24,6 @@
         <main>
             <div class="headerGradient"></div>
             <!-- <div id="masked"></div> -->
-            <img class="heroMask" src="./assets/path.svg" alt="">
             <section class="hero">
                 <div class="heroTextContainer">
                     <h1 class="heroName">James MacDonald</h1>
@@ -134,7 +133,7 @@
                     <div class="gradientTitle"></div>
                     <div class="myWorksContainer">
                         <div class="galleryContainer">
-                            <div class="project">
+                            <div class="project active">
                                 <div class="projectBlock left">
                                     <h4 class="subSectionTitle">Palentology Database</h4>
                                     <p class="projectDesc">One sentence description of the project</p>
@@ -143,18 +142,37 @@
                                     <!-- <a href="" class="loadProject">Live</a>
                                         <a href="" class="loadProject">GitHub</a> -->
                                         <div class="linkButtons">
-                                            <a class="loadProject" href="#">Live</a>
-                                            <a class="loadProject" href="#">GitHub</a>
+                                            <a class="gradientButton" href="#">Live</a>
+                                            <a class="gradientButton" href="#">GitHub</a>
                                         </div>
                                     </div>
                                     
                                     <figure class="projectBlock right">
-                                        <img src="./assets/Layer 0.svg" alt="">
+                                        <img src="./assets/AppleiMac.png" alt="">
+                                    </figure>
+                                </div>
+                                <div class="project">
+                                    <div class="projectBlock left">
+                                        <h4 class="subSectionTitle">Bike Theft App</h4>
+                                        <p class="projectDesc">Search areas of toronto to see where high bike theft areas are.</p>
+                                        <p class="projectTools">HTML, SCSS, JavaScript, jQuery, APIs</p>
+                                
+                                        <!-- <a href="" class="loadProject">Live</a>
+                                                                        <a href="" class="loadProject">GitHub</a> -->
+                                        <div class="linkButtons">
+                                            <a class="gradientButton" href="#">Live</a>
+                                            <a class="gradientButton" href="#">GitHub</a>
+                                        </div>
+                                    </div>
+                                
+                                    <figure class="projectBlock right">
+                                        <img src="./assets/AppleiMac.png" alt="">
                                     </figure>
                                 </div>
                             </div>
+                            
                             <div class="galleryControls">
-                                <div class="galleryNodes ">
+                                <div class="galleryNodes" id="galleryNodes">
                                     <div class="projectNode active">
                                         <i class="fas fa-desktop"></i>
                                     </div>
@@ -195,6 +213,10 @@
                                 <label for="message">Your Message</label>
                                 <div class="gradientInput"></div>
                             </div>
+                            <div class="gradientButton">
+                                <input type="submit" value="Send Message">
+                            </div>
+                            
                             </form>
                         <ul class="socialLinks">
                             <h4 class="subSectionTitle">Connect With Me At: </h4>
@@ -213,6 +235,7 @@
         </footer>
         
     </div>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
     <script src="public/scripts/app.js"></script>
 </body>
 </html>
