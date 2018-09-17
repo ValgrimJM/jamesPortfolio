@@ -2,6 +2,29 @@
     display: none;
     height: 60px;
 }
+
+.headerGradient{
+    @include animatedGradientBody(100%);
+    
+    position: absolute;
+    &:after{
+        @include animatedGradientAfter;
+        height: 30vh;
+        mask-image: url(https://mdn.mozillademos.org/files/12676/star.svg);
+        // clip-path: url(../../../assets/Layer\ 0.svg);
+    }
+}
+
+#masked {
+  width: 100px;
+  height: 100px;
+  background-color: #8cffa0;
+  -webkit-mask-image: url(https://mdn.mozillademos.org/files/12676/star.svg);
+  mask-image: url(https://mdn.mozillademos.org/files/12676/star.svg);
+}
+.heroMask{
+    width: 100%;
+}
 .hero{
     .heroTextContainer{
         margin-top: 12rem;

@@ -38,3 +38,6 @@ input[type="text"], input[type="email"], textarea, .social{
 label{
     @include fontSize(16);
 }
+p{
+    @include fontSize(16);
+}

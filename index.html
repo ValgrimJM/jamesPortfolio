@@ -12,15 +12,19 @@
     <title>James MacDonald | Front-End Web Developer</title>
 </head>
 <body>
+    
     <div class="bodyWrapper">
-        <header class="headerBar">
+        <!-- <header class="headerBar">
             <ul class="headerLinks">
-                <!-- <li class="link"></li>
                 <li class="link"></li>
-                <li class="link"></li> -->
+                <li class="link"></li>
+                <li class="link"></li>
             </ul>
-        </header>
+        </header> -->
         <main>
+            <div class="headerGradient"></div>
+            <!-- <div id="masked"></div> -->
+            <img class="heroMask" src="./assets/path.svg" alt="">
             <section class="hero">
                 <div class="heroTextContainer">
                     <h1 class="heroName">James MacDonald</h1>
@@ -29,13 +33,13 @@
             </section>
             <section class="about segment">
                 <div class="wrapper">
-                    <h3 class="sectionTitle">About Me</h3>
-                    <div class="gradientTitle"></div>
                     <div class="aboutContainer">
                         <figure class="aboutImg">
-                            <img class="portfolioImg" src="./assets/white.svg" alt="placeholder">
+                            <img class="portfolioImg" src="./assets/headshot.jpg" alt="placeholder">
                         </figure>
                         <div class="aboutText">
+                            <h3 class="sectionTitle">About Me</h3>
+                            <div class="gradientTitle"></div>
                             <p>Hi, I'm James MacDonald, a Mississauga based front-end web developer.  Seeking new experiences and opportunities has been the driving force behind much of my life, taking me across the globe and meeting people of all walks of life.  My problem-solving nature and natural curiosity stays with me whether im coding at the desk, or cooking in the kitchen.  From history to HTML, Firebase to fossils, my passion drives me to learn as much as I can.</p>
                             <p>The feeling of satisfation when all of the various pieces of code come together is the sugar in my coffee.  I look forward to working with a team that strives for greatness and </p>
                         </div>
@@ -132,15 +136,15 @@
                         <div class="galleryContainer">
                             <div class="project">
                                 <div class="projectBlock left">
-                                    <h4 class="subSectionTitle">Sample Project 1</h4>
+                                    <h4 class="subSectionTitle">Palentology Database</h4>
                                     <p class="projectDesc">One sentence description of the project</p>
-                                    <p class="projectTools">HTML, SCSS, JavaScript, jQuery</p>
+                                    <p class="projectTools">HTML, SCSS, JavaScript, jQuery, APIs</p>
                                     
                                     <!-- <a href="" class="loadProject">Live</a>
                                         <a href="" class="loadProject">GitHub</a> -->
                                         <div class="linkButtons">
-                                            <button class="loadProject">Live</button>
-                                            <button class="loadProject">GitHub</button>
+                                            <a class="loadProject" href="#">Live</a>
+                                            <a class="loadProject" href="#">GitHub</a>
                                         </div>
                                     </div>
                                     
@@ -150,7 +154,21 @@
                                 </div>
                             </div>
                             <div class="galleryControls">
-                                
+                                <div class="galleryNodes ">
+                                    <div class="projectNode active">
+                                        <i class="fas fa-desktop"></i>
+                                    </div>
+                                    <div class="projectNode">
+                                        <i class="fas fa-desktop"></i>
+                                    </div>
+                                    <div class="projectNode">
+                                        <i class="fas fa-desktop"></i>
+                                    </div>
+                                    <div class="projectNode">
+                                        <i class="fas fa-desktop"></i>
+                                    </div>
+                                </div>
+                                <div class="galleryBar"></div>
                             </div>
                         </div>
                 </div>
@@ -180,20 +198,20 @@
                             </form>
                         <ul class="socialLinks">
                             <h4 class="subSectionTitle">Connect With Me At: </h4>
-                            <li class="social"><i class="fab fa-twitter"></i>Twitter</li>
-                            <li class="social"><i class="devicon-github-plain"></i>GitHub</li>
-                            <li class="social"><i class="fab fa-medium"></i>Medium</li>
-                            <li class="social"><i class="fab fa-linkedin"></i>LinkedIn</li>
+                            <a href="https://twitter.com/JamesMacDOMald"><li class="social"><i class="fab fa-twitter"></i>https://twitter.com/JamesMacDOMald</li></a>
+                            <a href="https://github.com/ValgrimJM"><li class="social"><i class="devicon-github-plain"></i>https://github.com/ValgrimJM</li></a>
+                            <a href="https://medium.com/@jamesdavidmacdonald"><li class="social"><i class="fab fa-medium"></i>https://medium.com/@jamesdavidmacdonald</li></a>
+                            <a href="https://www.linkedin.com/in/jamesdavidmacdonald/"><li class="social"><i class="fab fa-linkedin"></i>https://www.linkedin.com/in/jamesdavidmacdonald/</li></a>
                         </ul>
                     </div>
                 </div>
             </section>
         </main>
         <footer class="footerBar">
-            
+            <a href="https://www.freepik.com/free-photos-vectors/background">Background vector created by Freepik</a>
+            <a href='https://www.freepik.com/free-vector/abstract-molecules-background_1170854.htm'>Designed by Harryarts</a>
         </footer>
-        <a href="https://www.freepik.com/free-photos-vectors/background">Background vector created by Freepik</a>
-        <a href='https://www.freepik.com/free-vector/abstract-molecules-background_1170854.htm'>Designed by Harryarts</a>
+        
     </div>
     <script src="public/scripts/app.js"></script>
 </body>

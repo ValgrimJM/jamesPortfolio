@@ -1,5 +1,6 @@
 body{
     background-color: $bgBlue;
+    position: relative;
 }
 .wrapper{
     width: 90%;
@@ -13,9 +14,9 @@ ul{
     background-color: $bgBlock;
     display: flex;
 }
-.segment{
-    margin-top: 10rem;
-}
+// .segment{
+//     margin-top: 10rem;
+// }
 .gradientTitle{
     @include animatedGradientBody(150px);
     margin: 0 auto 30px;
@@ -31,13 +32,14 @@ ul{
         flex: 1 0 100%;
     }
     .aboutImg{
-        flex: 1 0 35%;
+        flex: 1 0 calc(35% - 80px);
         display: flex;
         justify-content: center;
         align-items: center;
+        margin: 40px;
         .portfolioImg{
-            border-radius: 10px;
-            width: 60%;
+            border-radius: 10% 10% 10% 100%;
+            width: 100%;
         }
     }
     .aboutText{
@@ -47,6 +49,12 @@ ul{
 //************ Skill list css ************
 .mySkills{
     height: 100vh;
+    background: 
+    linear-gradient(
+        rgba(5, 7, 28, 0.85), 
+        rgba(5, 7, 28, 1)), 
+        url(../../../assets/615.png);
+    padding-top: 40px;
 }
 .skillList{
     display: flex;
@@ -54,7 +62,7 @@ ul{
     justify-content: center;
     align-items: center;
     .skillBlock{
-        flex: 1 0 calc(25% - 20px);
+        flex: 1 0 calc(15% - 20px);
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
@@ -88,7 +96,7 @@ ul{
 //************ My Works css ************
 .myWorks{
     .galleryContainer{
-        min-height: 65vh;
+        min-height: 60vh;
         width: 100%;
         .project{
             display: flex;
@@ -116,9 +124,80 @@ ul{
             }
         }
 }
+.linkButtons{
+    a{
+        text-decoration: none;
+        padding: 20px;
+        background: white;
+        transition: 0.3s;
+        &:hover{
+            background: red;
+        }
+    }
+}
+.galleryControls{
+    height: 10vh;
+    display: flex;
+    position: relative;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 40px;
+    .galleryNodes{
+        position: absolute;
+        display: flex;
+        justify-content: space-between;
+        width: 70%;
+        z-index: 2;
+        .projectNode{
+            position: relative;
+            height:50px;
+            width:50px;
+            background-image: url("../../../assets/shape.png");
+            i{
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    z-index: 4;
+                    font-size: 2.5rem;
+                }
+            &:hover{
+                &:after{
+                    @include animatedGradientAfter;
+                    height: 60px;
+                    width: 60px;
+                    top: -5px;
+                    // left: 0;
+                    -webkit-clip-path: circle(25px at 25px 30px);
+                    clip-path: circle(25px at 25px 30px);
+                }
+            }
+            &.active{
+                &:after{
+                    @include animatedGradientAfter;
+                    height: 60px;
+                    width: 60px;
+                    top: -5px;
+                    // left: 0;
+                    -webkit-clip-path: circle(25px at 25px 30px);
+                    clip-path: circle(25px at 25px 30px);
+                }
+                
+            }
+        }
+    }
+}
+.galleryBar{
+    @include animatedGradientBody(65%);
+    margin: 5vh auto;
+    height: 0px;
+    &:after{
+        @include animatedGradientAfter;
+    }
+}
 //Contact and Social Media Styles
 .contact{
-    height: 65vh;
+    height: 90vh;
 }
 
 .contactContainer{
@@ -156,6 +235,7 @@ input, textarea{
     border-image-slice: 1;
     color: $white;
 }
+
 label{
     position: absolute;
     top: 10px;
@@ -163,14 +243,10 @@ label{
     pointer-events: none;
     transition: 0.5s;
 }
-// input:focus ~ label, textarea:focus ~ label,input:valid ~ label, textarea:valid ~ label
-// input:invalid ~ label, textarea:invalid ~ label{
-//     top: -12px;
-//     color: #00b0ff;
-// }
+
 input:not(:placeholder-shown) ~ label, input:focus ~ label, textarea:focus ~ label, textarea:not(:placeholder-shown) ~ label{
     top: -20px;
-    color: #00b0ff;
+    color: $highlightLinks;
     
 }
 
@@ -178,7 +254,23 @@ input:not(:placeholder-shown) ~ label, input:focus ~ label, textarea:focus ~ lab
     @include animatedGradientBody(100%);
     &:after{
         @include animatedGradientAfter;
+        width: 100%;
+        left: 0;
     }
+}
+.social{
+    margin-bottom: 25px;
+    
+    color: $white;
+    &:hover{
+        color: $highlightLinks;
+    }
+}
+.socialLinks a{
+    text-decoration: none;
+}
+.socialLinks i{
+    margin-right: 15px;
 }
 
 

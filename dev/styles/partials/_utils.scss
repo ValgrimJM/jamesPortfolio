@@ -8,6 +8,7 @@ $bgSkillSphere: #3d3e60;
 //highlight colours
 $highlightBlue : #3d59e8;
 $highlightPurple: #8e00ff;
+$highlightLinks: #00b0ff;
 $white: #FFFFFF;
 
 //gradients 
@@ -18,11 +19,8 @@ $purp-blueBasic: linear-gradient(65deg, #8e00ff 35%, #00b0ff 65%);
 	0% {
 		background-position: 0% 50%;
 	}
-	50% {
-		background-position: 100% 50%;
-	}
 	100% {
-		background-position: 0% 50%;
+		background-position: -150% 50%;
 	}
 }
 
@@ -34,17 +32,18 @@ $purp-blueBasic: linear-gradient(65deg, #8e00ff 35%, #00b0ff 65%);
     width: $width;
 }
 @mixin animatedGradientAfter{
-     content: '';
-        position: absolute;
-        top: calc(-1 * var(--borderWidth));
-        left: calc(-1 * var(--borderWidth));
-        height: 3px;
-        width: calc(100% + var(--borderWidth) * 2);
-        background: linear-gradient(65deg, #8e00ff 35%, #00b0ff 65%);
-        z-index: 1;
-        animation: animatedgradient 10s ease alternate infinite;
-        background-size: 300% 300%;
-        border-radius: 3px;
+    content: '';
+    position: absolute;
+    top: calc(-1 * var(--borderWidth));
+    left: calc(-1 * var(--borderWidth));
+    height: 3px;
+    width: calc(100% + var(--borderWidth) * 2);
+    background: linear-gradient(90deg, #8e00ff 35%, #00b0ff 65%, #8e00ff 95%);
+    z-index: 1;
+    animation: animatedgradient 10s ease infinite;
+    background-size: 300% 300%;
+    border-radius: 3px;
 }
+
 
 
