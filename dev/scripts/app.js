@@ -2,11 +2,19 @@ const portfolio = {};
 
 portfolio.myWorks = () => {
         let btns = document.getElementsByClassName("projectNode");
-        for (var i = 0; i < btns.length; i++) {
+        for (let i = 0; i < btns.length; i++) {
             btns[i].addEventListener("click", function () {
-                var current = document.getElementsByClassName("active");
-                current[0].className = current[0].className.replace(" active", "");
+                let nodeBar = document.getElementById("galleryNodes");
+                let projects = document.getElementById("galleryContainer");
+                let allProj = projects.getElementsByClassName("project")
+                let currentNode = nodeBar.getElementsByClassName("active");
+                let currentProj = projects.getElementsByClassName("active");
+                currentNode[0].className = currentNode[0].className.replace(" active", "");
+                currentProj[0].className = currentProj[0].className.replace(" active", "");
                 this.className += " active";
+                console.log(allProj[(this.classList[1])]);
+                
+                allProj[(this.classList[1])].className += " active";
             });
     }
 }

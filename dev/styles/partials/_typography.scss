@@ -1,4 +1,5 @@
 $josefin: 'Josefin Sans', sans-serif;
+$cardo: "Cardo", serif;
 
 @mixin fontSize($sizeValue){
     font-size: $sizeValue * 1px;
@@ -11,10 +12,13 @@ html{
 
 .heroName{
     @include fontSize(90);
+    font-family: $cardo;
+    margin-bottom: 0;
 }
-.heroJob{
-    @include fontSize(55);
-    color: $highlightBlue;
+.heroJob, .jobListContainer{
+    @include fontSize(50);
+    // color: $highlightBlue;
+    // margin-top: 0;
 }
 .sectionTitle, .social i{
     @include fontSize(35);
@@ -32,12 +36,6 @@ html{
 .subSectionTitle{
     @include fontSize(20);
 }
-input[type="text"], input[type="email"], textarea, .social{
-    @include fontSize(16);
-}
-label{
-    @include fontSize(16);
-}
-p{
+input[type="text"], input[type="email"], textarea, .social, .linkButtons a, label, p{
     @include fontSize(16);
 }

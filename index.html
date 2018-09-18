@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:400,600,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Cardo:400,700|Josefin+Sans:400,600,700" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
         crossorigin="anonymous">
@@ -27,7 +27,15 @@
             <section class="hero">
                 <div class="heroTextContainer">
                     <h1 class="heroName">James MacDonald</h1>
-                    <h2 class="heroJob">Front-End Developer</h2>
+                    <!-- <h2 class="heroJob">Front-End Developer</h2> -->
+                    <div class="jobListContainer">
+                        <ul class="jobList">
+                            <li class="jobItem">Front-End Developer</li>
+                            <li class="jobItem">Pretty Cool Dude</li>
+                            <li class="jobItem">Might Be A Dinosaur</li>
+                            <li class="jobItem">Front-End Developer</li>
+                        </ul>
+                    </div>
                 </div>
             </section>
             <section class="about segment">
@@ -132,57 +140,51 @@
                     <h3 class="sectionTitle">My Works</h3>
                     <div class="gradientTitle"></div>
                     <div class="myWorksContainer">
-                        <div class="galleryContainer">
+                        <div class="galleryContainer" id="galleryContainer">
                             <div class="project active">
                                 <div class="projectBlock left">
                                     <h4 class="subSectionTitle">Palentology Database</h4>
-                                    <p class="projectDesc">One sentence description of the project</p>
-                                    <p class="projectTools">HTML, SCSS, JavaScript, jQuery, APIs</p>
-                                    
-                                    <!-- <a href="" class="loadProject">Live</a>
-                                        <a href="" class="loadProject">GitHub</a> -->
-                                        <div class="linkButtons">
-                                            <a class="gradientButton" href="#">Live</a>
-                                            <a class="gradientButton" href="#">GitHub</a>
-                                        </div>
+                                    <p class="projectDesc">Look through several time periods from Earth's history and discover prehistoric animals from long ago.</p>
+                                    <p class="projectTools">HTML | SCSS | JavaScript | jQuery | APIs</p>
+                                    <div class="linkButtons">
+                                        <a class="gradientButton" href="#">Live</a>
+                                        <a class="gradientButton" href="#">GitHub</a>
                                     </div>
-                                    
-                                    <figure class="projectBlock right">
-                                        <img src="./assets/AppleiMac.png" alt="">
-                                    </figure>
                                 </div>
-                                <div class="project">
-                                    <div class="projectBlock left">
-                                        <h4 class="subSectionTitle">Bike Theft App</h4>
-                                        <p class="projectDesc">Search areas of toronto to see where high bike theft areas are.</p>
-                                        <p class="projectTools">HTML, SCSS, JavaScript, jQuery, APIs</p>
-                                
-                                        <!-- <a href="" class="loadProject">Live</a>
-                                                                        <a href="" class="loadProject">GitHub</a> -->
-                                        <div class="linkButtons">
-                                            <a class="gradientButton" href="#">Live</a>
-                                            <a class="gradientButton" href="#">GitHub</a>
-                                        </div>
-                                    </div>
-                                
-                                    <figure class="projectBlock right">
-                                        <img src="./assets/AppleiMac.png" alt="">
-                                    </figure>
-                                </div>
+                                <figure class="projectBlock right">
+                                    <img src="./assets/AppleiMac.png" alt="">
+                                </figure>
                             </div>
+                            <div class="project">
+                                <div class="projectBlock left">
+                                    <h4 class="subSectionTitle">Bike Theft App</h4>
+                                    <p class="projectDesc">Use the Toronto Police crime statistics to search for safe areas to leave your bike.</p>
+                                    <p class="projectTools">HTML | SCSS | JavaScript | jQuery | APIs | Firebase | Pair Programming</p>
+                                    <div class="linkButtons">
+                                        <a class="gradientButton" href="#">Live</a>
+                                        <a class="gradientButton" href="#">GitHub</a>
+                                    </div>
+                                </div>
                             
+                                <figure class="projectBlock right">
+                                    <img src="./assets/AppleiMac.png" alt="">
+                                </figure>
+                            </div>
+                            <div class="project">Test #1</div>
+                            <div class="project">Test #2</div>
+                        </div>             
                             <div class="galleryControls">
                                 <div class="galleryNodes" id="galleryNodes">
-                                    <div class="projectNode active">
+                                    <div class="projectNode 0 active">
                                         <i class="fas fa-desktop"></i>
                                     </div>
-                                    <div class="projectNode">
+                                    <div class="projectNode 1">
                                         <i class="fas fa-desktop"></i>
                                     </div>
-                                    <div class="projectNode">
+                                    <div class="projectNode 2">
                                         <i class="fas fa-desktop"></i>
                                     </div>
-                                    <div class="projectNode">
+                                    <div class="projectNode 3">
                                         <i class="fas fa-desktop"></i>
                                     </div>
                                 </div>
@@ -196,7 +198,7 @@
                     <h3 class="sectionTitle">Contact</h3>
                     <div class="gradientTitle"></div>
                     <div class="contactContainer">
-                        <form class="contactForm" action="">
+                        <form class="contactForm" action="https://formspree.io/jamesdavidmacdonald@gmail.com" method="POST">
                             <h4 class="subSectionTitle">Let's Work Together</h4>
                             <div class="contactField">
                                 <input type="text" class="name" name="name" placeholder=" ">
@@ -204,8 +206,8 @@
                                 <div class="gradientInput"></div>
                             </div>
                             <div class="contactField">
-                                <input type="email" class="email" name="email" placeholder=" ">
-                                <label for="email">Email Address</label>
+                                <input type="email" class="email" name="_replyto" placeholder=" ">
+                                <label for="_replyto">Email Address</label>
                                 <div class="gradientInput"></div>
                             </div>
                             <div class="contactField">
@@ -230,8 +232,8 @@
             </section>
         </main>
         <footer class="footerBar">
-            <a href="https://www.freepik.com/free-photos-vectors/background">Background vector created by Freepik</a>
-            <a href='https://www.freepik.com/free-vector/abstract-molecules-background_1170854.htm'>Designed by Harryarts</a>
+            <a href="" class="topButton"><i class="far fa-arrow-alt-circle-up"></i></a> 
+            <p>&copy; James MacDonald 2018 | Headshot By Pan Lau</p>
         </footer>
         
     </div>
