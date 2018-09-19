@@ -71,7 +71,7 @@ $purp-blueBasic: linear-gradient(65deg, #8e00ff 35%, #00b0ff 65%);
     content: '';
     position: absolute;
     height: 3px;
-    background: linear-gradient(90deg, #07081a 35%, rgba(61,89,232, 0.7) 65%, #07081a 95%);
+    background: linear-gradient(90deg, rgba(142,0,255, 0.7) 35%, #00c3ff 65%, rgba(142,0,255, 0.7) 95%);
     z-index: 1;
     animation: animatedGradient 15s ease infinite;
     background-size: 300% 300%;

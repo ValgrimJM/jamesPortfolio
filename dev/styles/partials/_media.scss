@@ -1,0 +1,157 @@
+@media (max-width: 890px){
+    .jobListContainer{
+        width: 90%;
+    }
+    .mySkills{
+        height: auto;
+    }
+    .skillList{
+        .skillBlock{
+            flex: 0 0 calc(20% - 20px);
+        }
+    }
+}
+@media (max-width: 760px){
+    .jobListContainer{
+        width: 100%;
+    }
+    .skillList{
+        .skillBlock{
+            flex: 0 0 calc(25% - 20px);
+        }
+    }
+}
+@media (max-width: 690px){
+    html{
+        font-size: 50%;
+    }
+    .aboutContainer{
+        flex-direction: column;
+        .aboutImg {
+            margin: 75px 0 0 0;
+            .portfolioImg{
+                width: 50%;
+            }
+        }
+    }
+    .contact{
+        height: 90vh;
+        .socialMedia{
+            width: 30%;
+        }
+        .contactForm{
+            width: 60%;
+        }
+    } 
+}
+@media (max-width: 570px){
+
+    .heroName{
+        @include fontSize(70);
+    }
+    .jobListContainer{
+        @include fontSize(40);
+    }
+    .myWorksContainer{
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        align-items: center;
+        height: 90vh;
+    }
+    .myWorks .galleryContainer {
+        width: 85%;
+        min-height: 90vh;
+        .project{
+            flex-direction: column-reverse;
+            align-items: center;
+            justify-content: end;
+            height: 80vh;
+            .projectBlock{
+                width: 100%;
+                &.left{
+                    padding: 0;
+                }
+                &.right{
+                    width: 85%;
+                }
+            }
+        }
+    }
+    .galleryControls {
+        width: 10%;
+        height: 75vh;
+        .galleryBar{
+            width:0px;
+            height: 75vh;
+            &:after{
+                width: calc(100% + 4px);
+                height: 100%;
+                left: -2px;
+            }
+        }
+        .galleryNodes{
+            flex-direction: column;
+            align-items: center;
+            height: 75vh;
+            }
+    }
+    .contact{
+        .socialMedia{
+            width: 20%;
+        }
+        .contactForm{
+            width: 75%;
+        }
+    } 
+    .contactContainer{
+            .contactForm, .socialMedia{
+            margin: 0 auto;
+        }
+        .socialLinks{
+            flex-direction: column;
+            i{
+                margin: 0;
+            }
+        }
+    }
+    .skillList{
+        .skillBlock{
+            flex: 0 0 calc(33% - 10px);
+            margin: 5px;
+        }
+    }
+    
+}
+@media (max-width: 440px){
+    .heroName{
+        @include fontSize(50);
+    }
+    .jobListContainer{
+        @include fontSize(28);
+    }
+    .skillList{
+        .skillBlock{
+            flex: 0 0 calc(50% - 10px);
+            margin: 5px;
+        }
+    }
+
+    .linkButtons .gradientButton{
+        padding: 10px 20px;
+    }
+    .galleryControls .galleryNodes .projectNode{
+        background-size: contain;
+        height: 40px;
+        width: 40px;
+
+        &.active:after{
+            height: 50px;
+            width: 50px;
+            clip-path: circle(20px at 20px 25px);
+        }
+    }
+    .footerBar p{
+        @include fontSize(16);
+    }
+}

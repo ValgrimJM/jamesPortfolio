@@ -18,10 +18,20 @@ portfolio.myWorks = () => {
             });
     }
 }
+portfolio.toTop = () => {
+    $(".topButton").on("click", function () {
+        console.log('Test');
+        console.log($(".topButton").scrollTop());
+        document.querySelector(".bodyWrapper").scrollIntoView({
+            behavior: 'smooth' 
+        }, 1200);
+    });
+}
 
 
 portfolio.init = () => {
     portfolio.myWorks();
+    portfolio.toTop();
 }
 
 $(function () {

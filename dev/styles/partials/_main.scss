@@ -32,18 +32,19 @@ ul{
         flex: 1 0 100%;
     }
     .aboutImg{
-        flex: 1 0 calc(35% - 80px);
+        flex: 1 0 calc(40% - 80px);
         display: flex;
         justify-content: center;
         align-items: center;
-        margin: 40px;
+        margin: 30px;
+        margin-top: 75px;
         .portfolioImg{
             border-radius: 10% 10% 10% 100%;
             width: 100%;
         }
     }
     .aboutText{
-        flex: 1 0 65%;
+        flex: 1 0 60%;
     }
 }
 //************ Skill list css ************
@@ -117,8 +118,7 @@ ul{
 
 .projectBlock{
         display: flex;
-        width: 45%;
-        margin-left: 5%;
+        width: 50%;
         &.right{
             min-width: 25rem;
             img{
@@ -127,33 +127,44 @@ ul{
             }
         }
         &.left{
+            flex: 1 0 55%;
             flex-direction: column;
-            justify-content: space-around;
+            justify-content: space-evenly;
+            padding-right: 20px;
             .subSectionTitle{
                 margin-top: 0;
+                margin-bottom: 15px;
                 text-transform: uppercase;
             }
             p{
-                margin: 0
+                margin: 0;
+                line-height: 30px;
+            }
+            .projectTools{
+                margin-bottom: 10px;
             }
         }
 }
 .linkButtons{
-    a{
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    .gradientButton{
         text-decoration: none;
         padding: 15px 30px;
-        background: $bgBlock;
+        background-color: $bgBlock;
         color: $white;
         transition: 0.3s;
         margin: 0 15px;
         text-transform: uppercase;
+        position: relative;
         &:hover{
-            background: $bgSkillSphere;
+            background-color: $bgSkillSphere;
         }
     }
 }
 .galleryControls{
-    height: 10vh;
+    height: 15vh;
     display: flex;
     position: relative;
     justify-content: space-around;
@@ -219,16 +230,19 @@ ul{
 
 .contactContainer{
     display: flex;
-    .contactForm, .socialLinks{
+    .contactForm, .socialMedia{
         display: flex;
         flex-direction: column;
         width: 45%;
     }
     .contactForm{
-        margin-right: 5%;
-    }
-    .socialLinks{
         margin-left: 5%;
+    }
+    .socialMedia{
+        margin-right: 5%;
+        h4{
+            text-align: center;
+        }
     }
 }
 
@@ -299,16 +313,23 @@ input:invalid{
     
     color: $white;
     &:hover{
-        color: $highlightLinks;
+        color: $highlightPurple;
         transition: 0.3s;
     }
 }
-.socialLinks a{
-    text-decoration: none;
+.socialLinks {
+    display: flex;
+    text-align: center;
+    justify-content: space-around;
+    li{
+        text-align: center;
+    }
+    a{
+        text-decoration: none; 
+    }
+    i{
+        margin-right: 15px;
+    }
 }
-.socialLinks i{
-    margin-right: 15px;
-}
-
 
 

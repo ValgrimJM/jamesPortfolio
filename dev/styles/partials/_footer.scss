@@ -1,5 +1,18 @@
 //footer styles
 .footerBar{
-    height: 5vh;
-    
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    height: 16vh;
+    .topButton{
+        text-align: center;
+        color: $highlightPurple;
+        &:hover{
+            color: $highlightLinks;
+        }
+    }
+    p{
+        margin: 20px 0;
+    }
 }
