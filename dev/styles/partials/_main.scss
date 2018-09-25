@@ -1,6 +1,8 @@
 body{
     background-color: $bgBlue;
-    position: relative;
+    .bodyWrapper{
+        position: relative;
+    }
 }
 .wrapper{
     width: 90%;
@@ -14,9 +16,9 @@ ul{
     background-color: $bgBlock;
     display: flex;
 }
-// .segment{
-//     margin-top: 10rem;
-// }
+.segment{
+    padding-top: 35px;
+}
 .gradientTitle{
     @include animatedGradientBody(150px);
     margin: 0 auto 30px;
@@ -37,10 +39,10 @@ ul{
         justify-content: center;
         align-items: center;
         margin: 30px;
-        margin-top: 75px;
         .portfolioImg{
             border-radius: 10% 10% 10% 100%;
             width: 100%;
+            max-width: 300px;
         }
     }
     .aboutText{
@@ -56,6 +58,9 @@ ul{
         rgba(5, 7, 28, 1)), 
         url(../../../assets/615.png);
     padding-top: 40px;
+    .mySkillsContainer{
+        margin-bottom: 35px;
+    }
 }
 .skillList{
     display: flex;
@@ -149,19 +154,30 @@ ul{
     margin-bottom: 10px;
     display: flex;
     justify-content: center;
-    .gradientButton{
-        text-decoration: none;
-        padding: 15px 30px;
-        background-color: $bgBlock;
-        color: $white;
-        transition: 0.3s;
-        margin: 0 15px;
-        text-transform: uppercase;
+    .gradientBorder{
         position: relative;
-        &:hover{
-            background-color: $bgSkillSphere;
-        }
+        margin: 0 15px;
+        padding: 15px 0;
+        z-index: 1;
+        .gradientLink{
+            text-decoration: none;
+            padding: 15px 30px;
+            background-color: $bgBlock;
+            color: $white;
+            transition: 0.3s;
+            // margin: 0 15px;
+            text-transform: uppercase;
+            position: relative;
+            z-index: 2;
+            &:hover{
+                    background-color: $bgSkillSphere;
+                }
+            }
+            &:after{
+                    @include animatedButtonGradientAfter;
+                }
     }
+    
 }
 .galleryControls{
     height: 15vh;

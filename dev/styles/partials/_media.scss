@@ -12,6 +12,9 @@
     }
 }
 @media (max-width: 760px){
+    .aboutContainer .aboutImg{
+        margin-top: 0;
+    }
     .jobListContainer{
         width: 100%;
     }
@@ -25,33 +28,28 @@
     html{
         font-size: 50%;
     }
+    .wrapper{ width:80%;}
+    .headerBar{
+        .hamburger{
+            width: 10%;
+        }
+    }
+    .headerLinks{
+        width: 35%;
+    }
     .aboutContainer{
         flex-direction: column;
         .aboutImg {
-            margin: 75px 0 0 0;
+            margin: 75px 0 20px 0;
             .portfolioImg{
                 width: 50%;
             }
         }
+        .aboutText{
+            margin: 40px 0 35px;
+        }
     }
-    .contact{
-        height: 90vh;
-        .socialMedia{
-            width: 30%;
-        }
-        .contactForm{
-            width: 60%;
-        }
-    } 
-}
-@media (max-width: 570px){
 
-    .heroName{
-        @include fontSize(70);
-    }
-    .jobListContainer{
-        @include fontSize(40);
-    }
     .myWorksContainer{
         display: flex;
         flex-direction: row-reverse;
@@ -60,7 +58,7 @@
         height: 90vh;
     }
     .myWorks .galleryContainer {
-        width: 85%;
+        width: 80%;
         min-height: 90vh;
         .project{
             flex-direction: column-reverse;
@@ -96,6 +94,31 @@
             height: 75vh;
             }
     }
+
+    .contact{
+        height: 90vh;
+        .socialMedia{
+            width: 30%;
+        }
+        .contactForm{
+            width: 60%;
+        }
+    } 
+}
+@media (max-width: 570px){
+
+    .heroName{
+        @include fontSize(70);
+    }
+    .jobListContainer{
+        @include fontSize(40);
+    }
+    .aboutContainer{
+        .aboutImg {
+            margin: 60px 0 20px 0;
+        }
+    }
+    
     .contact{
         .socialMedia{
             width: 20%;
@@ -130,6 +153,14 @@
     .jobListContainer{
         @include fontSize(28);
     }
+    .aboutContainer{
+        .aboutImg {
+            margin: 50px 0 20px 0;
+            .portfolioImg{
+                width: 65%;
+            }
+        }
+    }
     .skillList{
         .skillBlock{
             flex: 0 0 calc(50% - 10px);
@@ -137,8 +168,13 @@
         }
     }
 
-    .linkButtons .gradientButton{
-        padding: 10px 20px;
+    .linkButtons {
+        .gradientBorder{
+            padding: 8px 0;
+            .gradientLink{
+                padding: 10px 20px;
+            }
+        }
     }
     .galleryControls .galleryNodes .projectNode{
         background-size: contain;
@@ -151,7 +187,20 @@
             clip-path: circle(20px at 20px 25px);
         }
     }
+    .galleryControls .galleryNodes .projectNode:hover::after{
+        height: 50px;
+        width: 50px;
+        clip-path: circle(20px at 20px 25px);
+    }
     .footerBar p{
         @include fontSize(16);
+    }
+}
+@media (max-width: 440px){
+    .myWorks .galleryContainer .project{
+        height: 90vh;
+        &.active{
+            width: 100%;
+        }
     }
 }

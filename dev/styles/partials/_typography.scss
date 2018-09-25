@@ -25,6 +25,7 @@ html{
     @include fontSize(35);
     text-align: center;
     margin-bottom: 5px;
+    margin-top: 0;
 }
 .skillTitle{
     @include fontSize(20);
@@ -37,7 +38,7 @@ html{
 .subSectionTitle{
     @include fontSize(22);
 }
-input[type="text"], input[type="email"], textarea, .social, .linkButtons a, label, p, .gradientButton{
+input[type="text"], input[type="email"], textarea, .social, .linkButtons a, label, p, .gradientButton, .headerBar .menuIcon, .headerLinks .link{
     @include fontSize(20);
-    line-height: 20px;
+    line-height: 25px;
 }

@@ -4,30 +4,51 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    
+
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon-16x16.png">
+    <link rel="manifest" href="./assets/site.webmanifest">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+
+
+
     <link href="https://fonts.googleapis.com/css?family=Cardo:400,700|Josefin+Sans:400,600,700" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
         crossorigin="anonymous">
     <link rel="stylesheet" href="public/styles/style.css">
     <title>James MacDonald | Front-End Web Developer</title>
+    
 </head>
 <body>
     
     <div class="bodyWrapper">
-        <!-- <header class="headerBar">
-            <ul class="headerLinks">
-                <li class="link"></li>
-                <li class="link"></li>
-                <li class="link"></li>
+        <header class="headerBar">
+            <button class="hamburger hamburger--squeeze" type="button">
+                <span class="hamburger-box">
+                    <span class="hamburger-inner"></span>
+                </span>
+            </button>
+            <ul class="headerLinks" id="headerLinks">
+                <li class="link aboutMe">About Me</li>
+                <div class="gradientInput"></div>
+                <li class="link skills">My Skills</li>
+                <div class="gradientInput"></div>
+                <li class="link works">My Works</li>
+                <div class="gradientInput"></div>
+                <li class="link contactMe">Contact Me</li>
+                <div class="gradientInput"></div>
             </ul>
-        </header> -->
+        </header>
         <main>
             <div class="headerGradient"></div>
-            <!-- <div id="masked"></div> -->
             <section class="hero">
                 <div class="heroTextContainer">
                     <h1 class="heroName">James MacDonald</h1>
-                    <!-- <h2 class="heroJob">Front-End Developer</h2> -->
                     <div class="jobListContainer">
                         <ul class="jobList">
                             <li class="jobItem">Front-End Developer</li>
@@ -42,13 +63,13 @@
                 <div class="wrapper">
                     <div class="aboutContainer">
                         <figure class="aboutImg">
-                            <img class="portfolioImg" src="./assets/headshot.jpg" alt="placeholder">
+                            <img class="portfolioImg" src="./assets/headshot.jpg" alt="A headshot of a very attractive programmer.">
                         </figure>
                         <div class="aboutText">
                             <h3 class="sectionTitle">About Me</h3>
                             <div class="gradientTitle"></div>
-                            <p>Hi, I'm James MacDonald, a Mississauga based front-end web developer.  Seeking new experiences and opportunities has been the driving force behind much of my life, taking me across the globe and meeting people of all walks of life.  My problem-solving nature and natural curiosity stays with me whether im coding at the desk, or cooking in the kitchen.  From history to HTML, Firebase to fossils, my passion drives me to learn as much as I can.</p>
-                            <p>The feeling of satisfation when all of the various pieces of code come together is the sugar in my coffee.  I look forward to working with a team that strives for greatness and </p>
+                            <p>Hi, I'm James MacDonald, a Mississauga based front-end web developer.  Seeking new experiences and opportunities has been the driving force behind much of my life, taking me across the globe and meeting people of all walks of life.  My problem-solving nature and natural curiosity stays with me whether I'm coding at the desk, or cooking in the kitchen.  From history to HTML, Firebase to fossils, my passion drives me to learn as much as I can.</p>
+                            <p>The feeling of satisfaction when all of the various pieces of code come together is the sugar in my coffee.  I look forward to working with a team that brings together skilled individuals and strives for greatness. </p>
                         </div>
                     </div>
                 </div>
@@ -143,31 +164,38 @@
                         <div class="galleryContainer" id="galleryContainer">
                             <div class="project active">
                                 <div class="projectBlock left">
-                                    <h4 class="subSectionTitle">Palentology Database</h4>
+                                    <h4 class="subSectionTitle">Visual Paleo Database</h4>
                                     <p class="projectDesc">Look through several time periods from Earth's history and discover prehistoric animals from long ago.</p>
                                     <p class="projectTools">HTML | SCSS | JavaScript | jQuery | APIs</p>
                                     <div class="linkButtons">
-                                        <a href=""Test></a>
-                                        <a class="gradientButton" href="#">Live</a>
-                                        <a class="gradientButton" href="#">GitHub</a>
+                                        <div class="gradientBorder">
+                                            <a class="gradientLink" href="http://www.jamesmacdonald.net/visual_paleo_db" target="_blank">Live</a>
+                                        </div>
+                                        <div class="gradientBorder">
+                                            <a class="gradientLink" href="https://valgrimjm.github.io/visual_paleo_db/" target="_blank">GitHub</a>
+                                        </div>
                                     </div>
                                 </div>
                                 <figure class="projectBlock right">
-                                    <img src="./assets/AppleiMac.png" alt="">
+                                    <img src="./assets/VisualPaleoDB.png" alt="Visual Paleo DB">
                                 </figure>
                             </div>
                             <div class="project">
                                 <div class="projectBlock left">
-                                    <h4 class="subSectionTitle">Bike Theft App</h4>
+                                    <h4 class="subSectionTitle">Safe Cycle Toronto</h4>
                                     <p class="projectDesc">Use the Toronto Police crime statistics to search for safe areas to leave your bike.</p>
                                     <p class="projectTools">HTML | SCSS | JavaScript | jQuery | APIs | Firebase | Pair Programming</p>
                                     <div class="linkButtons">
-                                        <a class="gradientButton" href="#">Live</a>
-                                        <a class="gradientButton" href="#">GitHub</a>
+                                        <div class="gradientBorder">
+                                            <a class="gradientLink" href="http://www.jamesmacdonald.net/safe_cycle_toronto/" target="_blank">Live</a>
+                                        </div>
+                                        <div class="gradientBorder">
+                                            <a class="gradientLink" href="https://valgrimjm.github.io/rosieJamesProjectFour/" target="_blank">GitHub</a>
+                                        </div>
                                     </div>
                                 </div>
                                 <figure class="projectBlock right">
-                                    <img src="./assets/AppleiMac.png" alt="">
+                                    <img src="./assets/SafeCycleToronto.png" alt="Safe Cycle Toronto">
                                 </figure>
                             </div>
                             <div class="project">
@@ -176,26 +204,34 @@
                                     <p class="projectDesc">Conversion of a PDF document into a responsive website.</p>
                                     <p class="projectTools">HTML | SCSS | Responsive Design</p>
                                     <div class="linkButtons">
-                                        <a class="gradientButton" href="#">Live</a>
-                                        <a class="gradientButton" href="#">GitHub</a>
+                                        <div class="gradientBorder">
+                                            <a class="gradientLink" href="http://www.jamesmacdonald.net/pdfconversion/" target="_blank">Live</a>
+                                        </div>
+                                        <div class="gradientBorder">
+                                            <a class="gradientLink" href="https://valgrimjm.github.io/james_macdonald_project2/" target="_blank">GitHub</a>
+                                        </div>
                                     </div>
                                 </div>
                                 <figure class="projectBlock right">
-                                    <img src="./assets/AppleiMac.png" alt="">
+                                    <img src="./assets/PDFConversion.png" alt="Corporate Website">
                                 </figure>
                             </div>
                             <div class="project">
                                 <div class="projectBlock left">
                                     <h4 class="subSectionTitle">Havoc Of Heroes</h4>
-                                    <p class="projectDesc">Create a team of superheroes and compete against teams other users have made.  What team will be the best?</p>
+                                    <p class="projectDesc">Create a team of superheroes and compete against teams other users have made.</p>
                                     <p class="projectTools">HTML | SCSS | JavaScript | React | API | Firebase | Group Programming</p>
                                     <div class="linkButtons">
-                                        <a class="gradientButton" href="#">Live</a>
-                                        <a class="gradientButton" href="#">GitHub</a>
+                                        <div class="gradientBorder">
+                                            <a class="gradientLink" href="https://superherobattle-61d9c.firebaseapp.com/" target="_blank">Live</a>
+                                        </div>
+                                        <!-- <div class="gradientBorder">
+                                            <a class="gradientLink" href="#">GitHub</a>
+                                        </div> -->
                                     </div>
                                 </div>
                                 <figure class="projectBlock right">
-                                    <img src="./assets/AppleiMac.png" alt="">
+                                    <img src="./assets/HavocOfHeroes.png" alt="Havoc Of Heroes Battle Screen">
                                 </figure>
                             </div>
                         </div>             

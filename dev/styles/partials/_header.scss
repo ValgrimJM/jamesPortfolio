@@ -1,8 +1,90 @@
 .headerBar{
-    display: none;
     height: 60px;
-}
+    position: absolute;
+    top: 0;
+    right: 0;
+    .hamburger{
+        width: 5%;
+        height: 40px;
+        position: fixed;
+        top: 0;
+        right:0;
+        padding: 0;
+        z-index: 2;
+        transition: 0.3s;
+        .hamburger-box{
+            width: 30px;
+        }
+        &:hover{
+            transition: 0.3s;
+            opacity: 1;
+            &.is-active{
+                .hamburger-inner{
+                        background-color: $highlightPurple;
+                    }
+                }
+            .hamburger-inner{
+                background-color: $highlightPurple;
+                &::after{
+                    background-color: $highlightPurple;
+                }
+                &::before{
+                    background-color: $highlightPurple;
+                }
+            }
+        }
+        .hamburger-inner{
+            background-color: $white;
+            &::after{
+                background-color: $white;
+            }
+            &::before{
+                background-color: $white;
+            }
+        }
+        .hamburger-inner, .hamburger-inner:before, .hamburger-inner:after{
+                width: 30px;
+        }
+        &.is-active{
+            background-color: $bgBlock;
+            box-shadow: -5px 13px 9px 7px rgba(0,0,0,0.7);
+        }
 
+    }
+}
+.headerLinks{
+    position: fixed;
+    right: -35%;
+    width: 25%;
+    top: 30px;
+    z-index: 3;
+    
+    // visibility: hidden;
+    transition: right 0.5s;
+    .gradientInput{
+        margin-bottom: 0;
+    }
+    .link{
+        padding: 10px 0;
+        text-align: center;
+        background-color: $bgBlock;
+        &:hover{
+            color: $white;
+            background-color: $bgSkillSphere;
+            transition: 0.3s;
+            cursor: pointer;
+        }
+    }
+    &.active{
+        right: 0;
+        visibility: visible;
+        
+        color: $white;
+        box-shadow: -5px 13px 9px 7px rgba(0,0,0,0.7);
+        transition: right 0.5s;
+        
+    }
+}
 .headerGradient{
     @include animatedGradientBody(100%);
     
